@@ -1,0 +1,38 @@
+@import "../../../../../styles/mixins/to-do-mixins.scss";
+
+.todo-item {
+    @include todo-item;
+
+    .action-buttons {
+        @include flex-center-items;
+        gap: $action-buttons-gap;
+
+        .todo-add-button-correct {
+            @include neumorphism-40-small;
+            @include action-button;
+        }
+
+        .todo-add-button-incorrect {
+            @include neumorphism-inset;
+            @include action-button;
+            color: $todo-add-button-incorrect-color;
+        }
+
+        .delete-button {
+            @include action-button;
+        }
+    }
+}
+
+.todo-item:hover {
+    .action-buttons {
+        .delete-button {
+            @include flex-center-items;
+        }
+
+        .todo-add-button-correct,
+        .todo-add-button-incorrect {
+            @include flex-center-items;
+        }
+    }
+}

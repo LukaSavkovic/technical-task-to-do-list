@@ -1,0 +1,9 @@
+@import "../variables/colors-variables.scss";
+@import "../variables/app-variables.scss";
+@import "../mixins/display-mixins.scss";
+
+@mixin header-container {
+    @include flex-space-evenly-center;
+    background: $header-linear-gradient;
+    height: $header-height;
+}

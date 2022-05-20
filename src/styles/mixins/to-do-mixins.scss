@@ -1,0 +1,69 @@
+@import "../variables/colors-variables.scss";
+@import "../variables/to-do-variables.scss";
+@import "../variables/app-variables.scss";
+
+@import "../mixins/neumorphism-mixins.scss";
+@import "../mixins/display-mixins.scss";
+
+@mixin app-container {
+    @include flex-column;
+    height: $app-container-height;
+}
+
+@mixin todo-container {
+    @include flex-1-1;
+    @include flex-space-bettween;
+    gap: $form-container-gap;
+    padding: $todo-container-padding;
+    background-image: linear-gradient(to bottom, $to-do-background-primary-color, $to-do-background-secondary-color);
+}
+
+@mixin form-container {
+    @include flex-1;
+}
+
+@mixin form-items {
+    @include flex-space-bettween-center;
+    @include neumorphism-20-medium;
+    padding: $form-items-padding;
+    min-width: $form-items-width;
+
+    mat-form-field {
+        width: $form-items-input-width;
+    }
+}
+
+@mixin todo-item-list-container {
+    display: grid;
+    gap: $todo-item-list-container-gap;
+    max-height: $todo-item-list-container-max-height;
+    overflow-y: scroll;
+}
+
+@mixin todo-item {
+    @include neumorphism-40-extrasmall;
+    @include flex-space-bettween-center;
+    padding: $todo-item-y-padding;
+    color: $todo-item-text-color;
+    max-width: $todo-item-max-width;
+    max-height: $todo-item-max-height;
+
+    mat-form-field {
+        width: $todo-item-input-width;
+    }
+}
+
+@mixin action-button {
+    @include neumorphism-40-small;
+    height: $action-button-height;
+    display: none;
+}
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-width) {
+        .todo-container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}

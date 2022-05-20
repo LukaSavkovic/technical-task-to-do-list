@@ -1,0 +1,7 @@
+<ng-container>
+    <div class="todo-item-list-container">
+        <div *ngFor="let toDoListItem of toDoList$ | async">
+            <app-todos-list-item [toDoListItem]="toDoListItem"></app-todos-list-item>
+        </div>
+    </div>
+</ng-container>

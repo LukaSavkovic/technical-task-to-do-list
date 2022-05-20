@@ -1,0 +1,16 @@
+$header-background-primary-color: #eb5f1a;
+$header-background-secondary-color: #be2210;
+
+
+$footer-background-primary-color: #eb5f1a;
+$footer-background-secondary-color: #be2210;
+
+$to-do-background-primary-color: #34393f;
+$to-do-background-secondary-color: #18191d;
+
+$todo-add-button-incorrect-color: #dc453b;
+
+$todo-item-text-color : #e0e0e0;
+
+$footer-linear-gradient: linear-gradient(to bottom, $to-do-background-primary-color, $footer-background-primary-color, $footer-background-secondary-color);
+$header-linear-gradient: linear-gradient(to top, $to-do-background-secondary-color, $header-background-primary-color, $header-background-secondary-color);

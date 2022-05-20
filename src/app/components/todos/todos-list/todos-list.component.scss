@@ -1,0 +1,11 @@
+@import "../../../../styles/mixins/to-do-mixins.scss";
+
+
+.todo-item-list-container {
+    @include todo-item-list-container;
+  
+}
+
+.todo-item-list-container::-webkit-scrollbar {
+    display: none;
+}

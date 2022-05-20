@@ -1,0 +1,32 @@
+@import "../../../styles/mixins/to-do-mixins.scss";
+
+.app-container {
+    @include app-container;
+
+    .todo-container {
+        @include todo-container;   
+
+        .form-container {
+            @include form-container;
+        
+            .form-items {
+                @include form-items;
+
+                .todo-add-button-correct {
+                    @include neumorphism-40-small;
+                }
+
+                .todo-add-button-incorrect {
+                    @include neumorphism-inset;
+                    color: $todo-add-button-incorrect-color;
+                }
+            }
+        }
+
+        .todo-list {
+            @include flex-2;
+        }
+    }
+}
+
+@include mobile;

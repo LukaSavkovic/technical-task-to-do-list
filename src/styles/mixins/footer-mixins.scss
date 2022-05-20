@@ -1,0 +1,13 @@
+@import "../variables/colors-variables.scss";
+@import "../variables/app-variables.scss";
+@import "../mixins/display-mixins.scss";
+
+@mixin footer-container {
+    @include flex-space-evenly-center;
+    background: $footer-linear-gradient;
+    height: $footer-height;
+
+    img {
+        height: $footer-image-size;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="todo-item">
+    <form [formGroup]="toDoForm">
+        <mat-form-field>
+            <input [ngClass]="{'todo-add-button-incorrect':!toDoForm.valid}" id="{{toDoListItem}}" matInput type="text"
+                readonly="true" formControlName="text">
+        </mat-form-field>
+    </form>
+
+    <div class="action-buttons">
+        <button [ngClass]="{'todo-add-button-incorrect':!toDoForm.valid,'todo-add-button-correct':toDoForm.valid}"
+            type="button" mat-raised-button color="primary" (click)="enableEdit()">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button class="delete-button" type="button" mat-raised-button color="primary" (click)="deleteToDoItem()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</div>

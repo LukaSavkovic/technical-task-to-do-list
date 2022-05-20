@@ -1,0 +1,23 @@
+@mixin neumorphism-20-medium {
+    border-radius: 20px;
+    background: linear-gradient(145deg, #606366, #1e2125);
+    box-shadow: 15px 15px 30px #252a2e, -15px -15px 30px #50555c;
+}
+
+@mixin neumorphism-40-small {
+    border-radius: 40px;
+    background: linear-gradient(145deg, #606366, #1e2125);
+    box-shadow: 7px 7px 30px #252a2e, -7px -7px 30px #50555c;
+}
+
+@mixin neumorphism-40-extrasmall {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #606366, #1e2125);
+    box-shadow: 4px 4px 10px #252a2e, -4px -4px 10px #50555c;
+}
+
+@mixin neumorphism-inset {
+    border-radius: 40px;
+    background: linear-gradient(145deg, #606366, #1e2125);
+    box-shadow: inset 7px 7px 30px #252a2e, inset -7px -7px 30px #50555c;
+}
